@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Analytics Example</title>
+</head>
+<body>
+    <h1>Firebase Analytics Example</h1>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+                apiKey: "AIzaSyAydhkxklJ25bG86MPTLvpNqkK7g6PYDsE",
+                authDomain: "analyticsexample-5fc51.firebaseapp.com",
+                projectId: "analyticsexample-5fc51",
+                storageBucket: "analyticsexample-5fc51.appspot.com",
+                messagingSenderId: "679158066510",
+                appId: "1:679158066510:web:ff1fed53904db7a68e821f",
+                measurementId: "G-XME8GXE5ZM"
+};
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const analytics = firebase.analytics();
+        <div id="messages">
+        <p>Welcome to the Firebase Analytics Example!</p>
+        <p>This is a simple webpage demonstrating Firebase Analytics integration.</p>
+    </div>
+
+        // Log a page view event
+        analytics.logEvent('page_view', { page_location: window.location.href });
+    </script>
+</body>
+</html>
